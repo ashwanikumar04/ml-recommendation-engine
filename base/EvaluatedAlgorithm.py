@@ -1,4 +1,4 @@
-from RecommenderMetrics import RecommenderMetrics as rm
+from .RecommenderMetrics import RecommenderMetrics as rm
 
 class EvaluatedAlgorithm:
     

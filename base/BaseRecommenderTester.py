@@ -1,7 +1,7 @@
 from surprise import SVD
 from surprise import NormalPredictor
-from Evaluator import Evaluator
-from BXBook import BXBook
+from .Evaluator import Evaluator
+from .BXBook import BXBook
 
 import random
 import numpy as np
