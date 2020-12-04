@@ -41,3 +41,15 @@ class BXBook:
 
     def get_book_name(self, book_id):
         return self.book_id_to_name_mapping.get(book_id, "")
+
+    def get_publications(self):
+        
+        with open(self.books_path, newline='',
+                encoding='ISO-8859-1') as csvfile:
+            book_reader = csv.reader(csvfile, delimiter=';')
+            next(book_reader)  #Skip header line
+            for row in book_reader:
+                book_id = row[0]
+                book_name = row[1]
+                self.book_id_to_name_mapping[book_id] = book_name
+        return ratings_dataset
